@@ -1,0 +1,14 @@
+---
+layout: default
+title: Little Forest Games Blog
+active: blog
+---
+
+<ul class="posts">
+
+{% for post in site.posts %}
+    <img id="img_postPreview" src="{{ post.image }}">
+    <h1><a href="{{ post.url }}">{{ post.title }}</a></h1>
+    <footer>posted on <span>{{ post.date | date_to_string }}</span></footer>
+  {% endfor %}
+</ul>
